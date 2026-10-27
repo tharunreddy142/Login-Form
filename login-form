@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Design</title>
+    <style>
+    
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+            font-family: cursive;
+            background-color: beige;
+
+        }
+
+        .container {
+            background-color: white;
+            width: 350px;
+            text-align: center;
+            height: fit-content;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 1px 3px 3px grey;
+        }
+        .header {
+            font-size: 20px;
+        }
+        .header::first-letter {
+            color: blue;
+            font-size: 50px;
+        }
+        .formin input {
+            border: 2px solid;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 6px;
+        }
+
+        .form a {
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            margin-left: 9px;
+        }
+
+        .form {
+            text-align: left;
+            position: relative;
+        }
+
+        .form input[type='email']:focus+label {
+            margin-top: -60px;
+            margin-left: 15px;
+            position: absolute;
+            background-color: white;
+            
+        }
+
+        .form input[type='password']:focus+label {
+            margin-top: -62px;
+            margin-left: 15px;
+            position: absolute;
+            background-color: white;
+            
+        }
+
+         .form input[type='password']:not(:focus)+label,
+         .form input[type='email']:not(:focus)+label{
+            display: none;
+         }
+
+         .form button {
+            width: 100%;
+            margin: 4px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: orangered;
+            color: white;
+            cursor: pointer;
+            font-family: cursive;
+            font-weight: bold;
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 style="font-family: sans-serif;">Authentication Form</h2>
+            </header>
+        <form class="form">
+            <div class="formin">
+                <input type="email" placeholder="Enter your EmailID">
+                <label>Email</label>
+        </div>
+        <div class="formin">
+            <input type="password" placeholder="Enter your password">
+            <label>Password</label>
+        </div>  
+        
+        <div class="formin">
+            <a href="#">forgot password?</a>
+        </div>
+
+        <div class="formin">
+            <button>Login</button>
+        </div>
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
